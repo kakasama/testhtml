@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html title="标题"><br>
+<meta charset="UTF-8">
+    <head>
+
+
+        <title>nothing left</title>
+        <!--css-->
+        <style type="text/css">
+            h1{
+                text-align:center;
+                
+            }
+            /*选择器：标签选择器，id选择器，类选择器，属性选择器*/
+            p{
+                color: green;
+            }
+            
+            #tag1{
+                color: red;
+            }
+            .cla3{
+                color: blue;
+            }
+
+            /*后代选择器,子元素选择器*/
+            div .cla1{
+                text-align: center;
+            }
+            div>p{
+                color: purple;
+            }
+            /*交集选择器，并集选择器，兄弟选择器*/
+             /* 
+             选择器1选择器2{}
+             #id.class{}
+             选择器1，选择器2{}        
+             .class,#id{}
+             选择器1~选择器2{}
+             .cla1~.cla2{}
+            
+            */
+
+            /*序选择器，属性选择器，通配符选择器
+            序选择器
+            选择器:first-child{}  同级别
+            选择器:first-of-type{}  同级别同类型
+            选择器:last-child{}
+            选择器:nth-child(数字){}
+            选择器:nth-of-type(数字){}
+            选择器:only-child{}
+            选择器:nth-child(odd){}odd奇数even偶数xn+y函数选择
+            属性选择器
+            标签[属性^=value]{}value值开头
+            标签[属性$=value]{}value值结尾
+            标签[属性*=value]{}value值包含
+            通配符选择器
+            *{}
+
+            */
+            
+            /*
+            权重 内联>id>类>元素  可叠加
+            */
+            span{
+                color: darkblue;
+            }
+            .header{
+                width: 600px;
+                height: 30px;
+                background: darkgray;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            .content{
+                width: 600px;
+                height: 400px;
+                background: darksalmon;
+                margin: auto;
+                border-image: url(http://www.baidu.com/bk.img)
+            }
+            .footer{
+                width: 600px;
+                height: 20px;
+                background: darkturquoise;
+                margin: auto;
+            }
+            .logo{
+                width: 40px;
+                height: 20px;
+                background: darkslategrey;
+                margin: 5px;
+                float: left;
+            }
+            .footer2{
+                display: inline;
+                background-color: red;
+            }
+
+           
+
+
+
+        </style>
+        
+        <!--base-->
+        <base target="_blank">
+        <!--explain-->
+    </head>
+    <body>
+        <!--funny shortcut key-->
+        <h1 id="skip2">title1</h1>
+        <h2>title2</h2>
+        <h3>title3</h3>
+        <h4>title4</h4>
+        <p id="skip">a paragraph</p>
+
+        <p id="tag1" class="cla1">标签示例1</p>
+        <div>
+        <p id="tag2" class="cla1">标签示例2</p>
+        <ul>
+            <li>
+                <p class="cla3">标签示例5</p>
+            </li>
+        </ul>
+        <p class="cla2">标签示例3</p>
+        <p id="tag3">标签示例4</p>
+        </div>        
+        <p class="cla4">标签示例6</p>
+        <p id="tag4">标签示例7</p>
+        <hr>
+        <!--img test-->
+        <img src="approve.png"  width="720" title="funny test img"><br>
+        This is a img <br>
+        <img src="approve.png"  width="360" title="funny test img"><br>
+        <!--path problem-->
+        <img src="img/approve.png"  width="720" title="funny test img"><br>
+        <!--a tag-->
+        <a href="https://www.baidu.com" title="to baidu">button</a><br>
+        <a href="http://www.taobao.com" target="_blank"><img src="approve.png" width="360"><br></a>
+        <!--假链接-->
+        <a href="javascript:" target="_self">原地不跳转</a>
+        <a href="#" target="_self">回顶部</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--当前页面跳转位置，锚点-->
+        <a href="#skip2" target="_self">跳转到段落</a>
+        <!--无序列表-->
+        <hr>
+        <ul>
+            <li><a href="https://www.baidu.com">大娃</a></li>
+            <li>二娃</li>
+            <li>三娃</li>
+            <li>四娃</li>
+            <li>五娃</li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        <!--有序列表，定义列表-->
+        <ol>
+            <li>123</li>
+            <li>321</li>
+        </ol>
+        <dl>
+            <li></li>
+            <dt>hhh</dt>
+            <dd>phhh</dd>
+        </dl>
+        <!--table tag-->
+        <table border="1" width="300px" height="200px">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <!--表单-->
+        <from>
+
+
+
+
+
+            <input type="text" value="请输入姓名"><br>
+            <input type="passport"><br>
+            <!--单选-->
+            <input type="radio" name="name" checked>大娃
+            <input type="radio" name="name">二娃<br>
+            <!--多选-->
+            <input type="checkbox">妹子
+            <input type="checkbox" checked>汉子<br>
+            <!--按钮，js有问题-->
+            <input type="button" value="click me" onclick="alert(sb);">快点点<br>
+            <input type="img" src="" onclick=""><br>
+            <!--重置-->
+            <input type="reset"><br>
+            <!--提交，from设置action为提交接口后就可以提交-->
+            <input type="submit"><br>
+            <!--隐藏内容-->
+            <input type="hidden"><br>
+        
+        
+       
+        </from>
+         <!--label tag-->
+        <from>
+            <!--label以绑定表单核文字-->
+            <label for="female">妹子</label><input type="text" id="female"><br>
+
+        </from>
+        <!--datalist-->
+        <from>
+            search<input type="text" list="search"><br>
+            <datalist id="search">
+                <option value="hhh"></option>
+                <option value="hhh1"></option>
+                <option value="hhh2"></option>
+            </datalist>
+            <!--select-->
+            选择
+            <select name="娃娃" id="child">选择
+                <option value="大娃">大娃</option>
+                <option value="二娃" selected>二娃</option>
+            </select><br>
+            <textarea name="remark" id="remark" cols="20" rows="10">备注</textarea>
+        </from><br>
+       <!--video
+       autoplay自动播放 controls 控制条 loop 循环 preload 预加载，和autoplay（优先）冲突 muted 静音
+       -->
+       <video src="视频地址" autoplay controls poster="视频占位图片" loop width="720"></video><br>
+       <video>
+           <source src="" type=""></video>
+           <!--用于支持多种格式-->
+       </video>
+       <!--audio 不能使用width/height/poster-->
+       <audio src=""></audio>
+       <audio >
+           <source src="" type=""></audio>
+       </audio>
+       <!--detail-->
+       <details>
+           <summary>摘要</summary>
+           详情
+       </details>
+       <!--marquee
+       behavior 滚动类型 direction 滚动方向 scrollamount 滚动速度 loop 滚动次数
+       -->
+       <marquee behavior="slid" direction="right" scrollamount="2" loop="2">
+           233333
+       </marquee>
+       <!--废弃标签 bius可以用于css的钩子-->
+       <br><hr>
+       <font></font>
+       <b></b>
+       <i></i>
+       <u></u>
+       <s></s>
+       <strong></strong>
+       <em></em>
+       <ins></ins>
+       <del></del>
+       <!--字符实体-->
+       <p>哈&nbsp;哈&lt;哈&gt;&copy;</p>
+
+       <!--div span-->
+       <div class="header">
+           <div class="logo"></div>
+       </div>
+       <div class="content"></div>
+       <div class="footer"></div>
+       <div class="footer2">test</div>
+       <p>哈哈<span class="colors">hhh</span>哈哈，呵呵呵呵</p>
+
+
+       
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
