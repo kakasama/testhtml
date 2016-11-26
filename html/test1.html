@@ -76,7 +76,7 @@
                 width: 600px;
                 height: 400px;
                 background: darksalmon;
-                margin: auto;
+                margin:0 auto;
                 background: url(http://pics.sc.chinaz.com/files/pic/pic9/201508/apic14052.jpg)
             }
             .footer{
@@ -103,6 +103,15 @@
                 background-image: url(03.jpg) ;
                 background-position: center center;
                 /*background-attachment: fixed;*/
+            }
+            .border{
+                height: 40px;
+                width: 200px;
+                border: 1px solid red;
+                padding-top: 30px;
+                padding-left: 4px;
+                margin-left: 10px;
+                margin-top: 10px;
             }
 
            
@@ -275,14 +284,14 @@
        <!--废弃标签 bius可以用于css的钩子-->
        <br><hr>
        <font></font>
-       <b></b>
-       <i></i>
-       <u></u>
-       <s></s>
-       <strong></strong>
-       <em></em>
-       <ins></ins>
-       <del></del>
+       <b>hhhhh</b>
+       <i>hhhhh</i>
+       <u>hhhhh</u>
+       <s>hhhhh</s>
+       <strong>hhhhh</strong>
+       <em>hhhhh</em>
+       <ins>hhhhh</ins>
+       <del>hhhhh</del>
        <!--字符实体-->
        <p>哈&nbsp;哈&lt;哈&gt;&copy;</p>
 
@@ -294,18 +303,69 @@
        <div class="footer"></div>
        <div class="footer2">test</div>
        <p>哈哈<span class="colors">hhh</span>哈哈，呵呵呵呵</p>
+       <!--块元素和行内元素的转换
+           display:block/inline
+       -->
 
        <!--背景图片-->
        <div class="bkimg">    
            
        </div>
+       <!--边框以及其内外边距-->
+       <div class="border">
+           this is the exmple for border
+           <!--
+               内边距 padding-top/right/bottom/left
+               顺序 上 右 下 左
+               外边距 margin-top/right/bottom/right
+               box-sizing 保证盒子宽高不变
+
+               清除系统默认的边距设置
+               第一种 *{margin:0;padding:0}
+               第二种  blockquote,body,button,dd,dl,
+               dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,
+               input,legend,li,ol,p,pre,td,textarea,th,
+               ul{margin:0;padding:0}
+           -->
+       </div>
+       <!--网页布局方式
+       标准流排版方式
+           浏览器默认排版方式
+           
+       浮动流排版方式
+         css标签：float
+         有点自适应屏幕的意味
+         排序规则：按浮动先后和浮动位置
+         浮动元素的贴靠规则
+         防止多个父标签中的浮动属性浮动在一起，
+         方法一给上一个父元素设置高度，
+         方法二使用元素的clear属性，（margin属性会失效）
+         值包括left，right，both，none，默认是none
+         方法三隔墙
+         外墙法：用另外的块级元素，比如div，并给该元素设置clear:both
+         但是这时上下元素的margin-bottom/top会失效
+         内墙法：在上个元素中末尾添加块级元素，并设置clear:both
+         上下元素的margin属性不受影响
+         方法四 ie6需要多设置*zoom:1来兼容
+         **伪元素选择器，给指定标签内容前后加入标签，可以用于做墙隔离浮动元素
+         格式：标签名称::before/after{content/weight/hight}
+         visbility:hidden
+         方法五 ie6需要多设置*zoom:1来兼容
+         给父元素设置overflow:hidden
+         overflow会将超出标签范围的内容裁减掉，类似于边框，
+         使子元素的margin属性不会影响父元素的位置
+         
+
+
+       定位流排版方式
+       -->
 
 
 
 
        <!--js-->
        <script>
-            document.write("<h1>This is a heading</h1>");
+            document.write("<h1>This is a header</h1>");
             document.write("<p>This is a paragraph</p>");
        </script>
 
