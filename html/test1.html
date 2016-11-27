@@ -169,7 +169,7 @@
         <br>
         <!--当前页面跳转位置，锚点-->
         <a href="#skip2" target="_self">跳转到段落</a>
-        <!--无序列表-->
+        <!--无序列表，常用于导航栏-->
         <hr>
         <ul>
             <li><a href="https://www.baidu.com">大娃</a></li>
@@ -358,6 +358,22 @@
 
 
        定位流排版方式
+       1、相对定位：相对该元素之前的位置进行调整
+       position:relative
+       配合top，left，bottom，right使用
+       对标准流布局会有影响
+       2、绝对定位：相对body，或父级绝对/相对/固定定位元素（优先最近）进行定位
+       position:obsolute
+       配合top，left，bottom，right使用
+       类似浮动流，元素脱离标准流
+       一般设置父元素为相对定位，子元素用绝对定位来调整子元素
+       3、固定定位：元素不随滚动条滚动
+       position:fixed
+       配合top，left，bottom，right使用
+
+       后面这个课程就没有了。。。坑，我要找其他课程来学了
+
+
        -->
 
 

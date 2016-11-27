@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html >
+    <meta charset="UTF-8">
+    <title>testforjs</title>
+    <head>
+
+    </head>
+    <body>
+        <!--行内-->
+        <input type="button" id="btn" value="btn1" onclick="alert('sb')">
+        <!--内嵌-->
+        <input type="button" id="btn2" value="btn2">
+        <script>
+            document.getElementById('btn2').onclick=function(){
+                alert('sb2');
+            }
+        </script>
+        <!--外链-->
+        <input type="button" id="btn3" value="btn3">
+        <script src="forjs.js"></script>
+
+        <!--其他示例-->
+        <input type="button" id="btn3" value="btn3">
+        <div id="box"></div>
+        
+    </body>
+</html>

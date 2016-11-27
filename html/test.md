@@ -66,7 +66,13 @@
   git add *  
 * 提交实际改动  
   git commit -m "代码提交信息"
-
+***
+## 其他问题
+* 已经安装了，但在vs code中提示未安装
+  >需要添加环境变量Git/bin和Git\libexec\git-core  
+  >添加的位置为环境变量的path下，用";"隔开每个路径  
+  >win10下的编辑界面已经可以不需要";"来隔开了  
+  >然后重启vs code，搞定
 
   
 ---
@@ -85,4 +91,15 @@
   * 然后重新安装ss  
   * 这样做的目的是更新整个系统，懒办法
 * pac文件编辑
-  * [参考链接](http://www.tuicool.com/articles/V77jyu)
+  * [参考链接](http://www.tuicool.com/articles/V77jyu)  
+
+# vscode使用记录
+## 快捷键
+* 快捷键指南  
+  * [参考连接]()
+
+## 常用插件
+
+## 调试
+
+## git
