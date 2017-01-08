@@ -188,3 +188,144 @@ child.parentNode.removeChild(child);
 */
 
 //我发现定义时调用函数不需要带参数和括号，是因为对于js来说实际上都是对象么？
+
+//var patt1 = /runoob/i; var patt1 = /runoob/g; var patt1 = /runoob/ig; i是不区分大小写，g是搜索所有匹配而不是第一个
+//用法，使用match,test或exce函数
+//1
+//var str="Is this all there is?";
+//var patt1=/is/ig;
+//document.write(str.match(patt1));
+/* 2
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+ */
+/*3
+var patt1=new RegExp("e");
+document.write(patt1.exec("The best things in life are free"));
+ */
+/*
+所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。
+全局变量是 window 对象的属性。
+全局函数是 window 对象的方法。
+甚至 HTML DOM 的 document 也是 window 对象的属性之一：
+
+screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。
+screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。
+
+location.hostname 返回 web 主机的域名
+location.pathname 返回当前页面的路径和文件名
+location.port 返回 web 主机的端口 （80 或 443）
+location.protocol 返回所使用的 web 协议（http:// 或 https://）
+location.href 属性返回当前页面的 URL
+location.assign() 方法加载新的文档
+
+history.back() - 与在浏览器点击后退按钮相同
+history.forward() - 与在浏览器中点击按钮向前相同
+
+
+浏览器检测
+由于 navigator 可误导浏览器检测，使用对象检测可用来嗅探不同的浏览器。
+由于不同的浏览器支持不同的对象，您可以使用对象来检测浏览器。
+例如，由于只有 Opera 支持属性 "window.opera"，您可以据此识别出 Opera。
+
+可以在 JavaScript 中创建三种消息框：警告框、确认框、提示框。
+window.alert("sometext");
+window.confirm() 方法可以不带上window对象，直接使用confirm()方法。
+window.prompt("sometext","defaultvalue");
+window.prompt() 方法可以不带上window对象，直接使用prompt()方法。
+
+setInterval() - 间隔指定的毫秒数不停地执行指定的代码。
+window.setInterval("javascript function",milliseconds);
+第一个参数是函数（function）。
+第二个参数间隔的毫秒数
+clearInterval() 方法用于停止 setInterval() 方法执行的函数代码。
+window.clearInterval(intervalVariable)
+window.clearInterval() 方法可以不使用window前缀，直接使用函数clearInterval()。
+要使用 clearInterval() 方法, 在创建计时方法时你必须使用全局变量：
+
+setTimeout() - 暂停指定的毫秒数后执行指定的代码
+window.setTimeout("javascript 函数",毫秒数);
+setTimeout() 方法会返回某个值。
+第一个参数是含有 JavaScript 语句的字符串。
+第二个参数指示从当前起多少毫秒后执行第一个参数。
+clearTimeout() 方法用于停止执行setTimeout()方法的函数代码。
+window.clearTimeout(timeoutVariable)
+window.clearTimeout() 方法可以不使用window 前缀。
+要使用clearTimeout() 方法, 你必须在创建超时方法中（setTimeout）使用全局变量:
+如果函数还未被执行，你可以使用 clearTimeout() 方法来停止执行函数代码。
+
+Note: setInterval() 和 setTimeout() 是 HTML DOM Window对象的两个方法。
+
+Cookie 用于存储 web 页面的用户信息
+Cookie 是一些数据, 存储于你电脑上的文本文件中。
+当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。
+Cookie 的作用就是用于解决 "如何记录客户端的用户信息":
+当用户访问 web 页面时，他的名字可以记录在 cookie 中。
+在用户下一次访问该页面时，可以在 cookie 中读取用户访问记录。
+Cookie 以名/值对形式存储，如下所示:
+username=John Doe
+当浏览器从服务器上请求 web 页面时， 属于该页面的 cookie 会被添加到该请求中。服务端通过这种方式来获取用户的信息
+avaScript 可以使用 document.cookie 属性来创建 、读取、及删除 cookie。
+JavaScript 中，创建 cookie 如下所示：
+document.cookie="username=John Doe";
+您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
+document.cookie="username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT";
+您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。
+document.cookie="username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/";
+使用 JavaScript 读取 Cookie
+在 JavaScript 中, 可以使用以下代码来读取 cookie：
+var x = document.cookie;
+在 JavaScript 中，修改 cookie 类似于创建 cookie，如下所示：
+document.cookie="username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/";
+旧的 cookie 将被覆盖。
+使用 JavaScript 删除 Cookie
+删除 cookie 非常简单。您只需要设置 expires 参数为以前的时间即可，如下所示，设置为 Thu, 01 Jan 1970 00:00:00 GMT:
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+注意，当您删除时不必指定 cookie 的值。
+
+
+CDN -内容分发网络
+如果许多不同的网站使用相同的 JavaScript 框架，那么把框架库存放在一个通用的位置供每个网页分享就变得很有意义了。
+CDN (Content Delivery Network) 解决了这个问题。CDN 是包含可分享代码库的服务器网络。
+Google 为一系列 JavaScript 库提供了免费的 CDN
+
+但是由于 Google 在中国经常被GFW（防火长城，英文名称Great Firewall of China，简写为Great Firewall，缩写GFW）屏蔽
+造成访问不稳定，所以建议使用百度静态资源公共库。
+如需在您的网页中使用 JavaScript 框架库，只需在 <script> 标签中引用该库即可：
+引用 jQuery
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+</script>
+
+创建 XMLHttpRequest 对象
+所有现代浏览器（IE7+、Firefox、Chrome、Safari 以及 Opera）均内建 XMLHttpRequest 对象。
+创建 XMLHttpRequest 对象的语法：
+variable=new XMLHttpRequest();
+
+与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+然而，在以下情况中，请使用 POST 请求：
+无法使用缓存文件（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST 没有数据量限制）
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();
+open(method,url,async)	
+规定请求的类型、URL 以及是否异步处理请求。
+method：请求的类型；GET 或 POST
+url：文件在服务器上的位置
+async：true（异步）或 false（同步）
+send(string)	
+将请求发送到服务器。
+string：仅用于 POST 请求
+
+get请求可能得到的是缓存的结果，为了避免这种情况，向URL添加一个唯一的ID 
+xmlhttp.open("GET","/try/ajax/demo_get.php?t=" + Math.random(),true);
+xmlhttp.send();
+
+如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：
+xmlhttp.open("POST","/try/ajax/demo_post2.php",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("fname=Henry&lname=Ford");
+
+
+*/
