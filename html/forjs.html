@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html >
-    <meta charset="UTF-8">
-    <title>testforjs</title>
     <head>
+        <meta charset="UTF-8">
+        <title>testforjs</title>
         <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
 
@@ -26,7 +26,14 @@
         <div id="box"></div>
 
         <button onclick="myFunction()">点我</button>
-
+        <!-- 完整语法 -->
+        <a v-bind:href="url"></a>
+        <!-- 缩写 -->
+        <a :href="url"></a>
+        <!-- 完整语法 -->
+        <a v-on:click="doSomething"></a>
+        <!-- 缩写 -->
+        <a @click="doSomething"></a>
 
         
     </body>

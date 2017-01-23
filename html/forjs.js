@@ -329,3 +329,7 @@ xmlhttp.send("fname=Henry&lname=Ford");
 
 
 */
+
+// VUE
+var vm = new Vue({})
+
